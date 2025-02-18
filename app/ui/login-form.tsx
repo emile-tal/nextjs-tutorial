@@ -11,15 +11,16 @@ import { Button } from './button';
 import { authenticate } from '@/app/lib/action';
 import { lusitana } from '@/app/ui/font';
 import { useActionState } from 'react';
-import { useSearchParams } from 'next/navigation';
 
 export default function LoginForm() {
-  const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
   );
+
+  if (false) {
+    console.log(isPending)
+  }
   return (
     <form action={formAction} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">

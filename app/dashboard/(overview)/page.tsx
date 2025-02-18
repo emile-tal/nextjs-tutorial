@@ -1,4 +1,4 @@
-import { fetchCardData, fetchLatestInvoices, fetchRevenue } from '../../lib/data';
+import { fetchCardData, fetchLatestInvoices } from '../../lib/data';
 
 import { Card } from '@/app/ui/dashboard/cards';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
